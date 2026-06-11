@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.rfp/rfp-ai",
+  "description": "Draft cited RFP and security questionnaire answers from your knowledge base, with human review",
+  "websiteUrl": "https://rfp.ai/docs/mcp",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://rfp.ai/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <token> — create a scoped API token in rfp.ai Settings (read-only by default; write scopes granted per token)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
